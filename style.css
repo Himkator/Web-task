@@ -49,11 +49,12 @@ hr{
 }
 .recipe-card{
     width: 390px;
-    height: 390;
+    height: 100%;
+}
+.card-button{
+    margin-bottom: 5px;
 }
 .recipes-cards-part{
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 80px;
 }
 .recipe img{
