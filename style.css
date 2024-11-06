@@ -61,6 +61,25 @@ hr{
     height:250px
 }
 
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Star icon style */
+.favorite-star {
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Filled star color when clicked */
+.favorite-star.favorited {
+    color: gold;
+}
+
 /* footer part */
 footer{
     background-color: black;

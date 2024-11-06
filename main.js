@@ -1,13 +1,12 @@
-//import recipes
+//import exports
 import { recipes } from '/recipe.js'
-
+import { favorites } from '/recipe.js'
 
 //get part where all recipes
 const div_recipe=document.getElementById('recipes')
 
 
-//divide them by 3(the easiest way)
-//TODO improve this part for more situation(for example if length cant be divided by 3)
+//append all recipe
 for(let i=0; i<recipes.length; i++){
     //create group for 3 reciepes
     const groupDiv = document.createElement('div');
@@ -32,11 +31,32 @@ for(let i=0; i<recipes.length; i++){
     recipeBody.classList.add('card-body');
     recipeDiv.appendChild(recipeBody)
 
+    //container for title and favorite
+    const titleContainer = document.createElement('div');
+    titleContainer.classList.add('title-container');
+
+
     //fill card body
     const title = document.createElement('h2');
     title.textContent = recipe.title;
     title.classList.add('card-title')
-    recipeBody.appendChild(title);
+
+    //star for favorite
+    const star = document.createElement('span');
+    star.classList.add('favorite-star');
+    star.innerHTML = '★'; 
+    star.title = "Click to favorite";
+
+    star.addEventListener('click', (e) => {
+        star.classList.toggle('favorited');
+        addFavoriteRecipe(recipe, star);
+    });
+
+    titleContainer.appendChild(title);
+    titleContainer.appendChild(star);
+
+    recipeBody.appendChild(titleContainer);
+    
 
     const description = document.createElement('p');
     description.textContent = recipe.description;
@@ -59,5 +79,18 @@ for(let i=0; i<recipes.length; i++){
 //TODO Improve this function
 function toRecipePage(indexOfRecipe){
     console.log(indexOfRecipe)
+}
+
+//function for click recipe
+function addFavoriteRecipe(recipe, star) {
+    console.log(`You clicked on: ${recipe.title}`);
+    if (favorites.includes(recipe)) {
+        favorites.splice(favorites.indexOf(recipe), 1); // Remove if already in favorites
+        star.classList.remove('favorited');
+    } else {
+        favorites.push(recipe); // Add if not in favorites
+        star.classList.add('favorited');
+    }
+    console.log(favorites)
 }
 
