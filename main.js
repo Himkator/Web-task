@@ -2,9 +2,32 @@
 import { recipes } from '/recipe.js'
 import { favorites } from '/recipe.js'
 
+
+
 //get part where all recipes
 const div_recipe=document.getElementById('recipes')
 
+const login_button=document.getElementById('login')
+const register_button=document.getElementById('register')
+const profile_button=document.getElementById('profile')
+
+login_button.addEventListener('click', ()=>toLogin())
+register_button.addEventListener('click', ()=>toRegister())
+profile_button.addEventListener('click', ()=>redirectToPage())
+
+
+// для переброски пользователя на страницу регистраций и входа при нажатий на иконку 
+function redirectToPage() {
+    window.location.href = "index.html"; 
+}
+
+function toLogin(){
+    window.location.href = "Login Register.html"; 
+}
+
+function toRegister(){
+    window.location.href = "Login Register.html"; 
+}
 
 //append all recipe
 for(let i=0; i<recipes.length; i++){
@@ -93,4 +116,3 @@ function addFavoriteRecipe(recipe, star) {
     }
     console.log(favorites)
 }
-
