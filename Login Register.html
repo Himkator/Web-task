@@ -23,9 +23,9 @@
                 <label for="login-password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="login-password" placeholder="Enter your password">
                 </div>
-                <button class="btn btn-green w-100" id="login_btn">Login</button>
+                <button class="btn btn-green w-100" id="login_btn" onclick="Login()">Login</button>
             </form>
-            <p class="text-center mt-3">Don't have an account? <span class="toggle-btn" id="toRegis">Register</span></p>
+            <p class="text-center mt-3">Don't have an account? <span class="toggle-btn" id="toRegis" onclick="toggleForms()">Register</span></p>
         </div>
 
          <!-- Register  -->
@@ -44,9 +44,9 @@
                     <label for="register-password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="register-password" placeholder="Enter your password">
                 </div>
-                <button type="submit" class="btn btn-green w-100 register" id="register_btn">Register</button>
+                <button type="submit" class="btn btn-green w-100 register" id="register_btn" onclick="toggleForms()">Register</button>
             </form>
-            <p class="text-center mt-3">Already have an account? <span class="toggle-btn" id="toLogin">Login</span></p>
+            <p class="text-center mt-3">Already have an account? <span class="toggle-btn" id="toLogin" onclick="toggleForms()">Login</span></p>
          </div>
     </div>
 </div>
