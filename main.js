@@ -2,15 +2,16 @@
 import { recipes } from '/recipe.js'
 import { favorites } from '/recipe.js'
 
-
+// if(!isLogin){
+//     document.getElementById('loginRegisterBtns').outerHTML = 
+//     '<img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="User Icon" width="50px" onclick="redirectToLoginPage()"/>'
+// } этот код должен был поменять кнопки на значок аватарки, при условий что кнопка логин была уже нажата
 
 //get part where all recipes
 const div_recipe=document.getElementById('recipes')
-
 const login_button=document.getElementById('login')
 const register_button=document.getElementById('register')
 const profile_button=document.getElementById('profile')
-
 login_button.addEventListener('click', ()=>toLogin())
 register_button.addEventListener('click', ()=>toRegister())
 profile_button.addEventListener('click', ()=>redirectToPage())
@@ -116,3 +117,6 @@ function addFavoriteRecipe(recipe, star) {
     }
     console.log(favorites)
 }
+
+
+   
