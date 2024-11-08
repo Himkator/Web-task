@@ -13,7 +13,7 @@
         <!-- Login -->
         <div class="form " id="login-form" >
             <h2 class="text-center">Login</h2>
-            <form>
+            <!-- <form> -->
                 <div class="mb-3">
                     <label for="login-email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="login-email" placeholder="Enter your email">
@@ -22,9 +22,9 @@
                 <label for="login-password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="login-password" placeholder="Enter your password">
                 </div>
-                <button type="submit" class="btn btn-green w-100" onclick="Login()">Login</button>
-            </form>
-            <p class="text-center mt-3">Don't have an account? <span class="toggle-btn" onclick="toggleForms()">Register</span></p>
+                <button type="submit" class="btn btn-green w-100" id="login_btn">Login</button>
+            <!-- </form> -->
+            <p class="text-center mt-3">Don't have an account? <span class="toggle-btn" id="toRegis">Register</span></p>
         </div>
 
          <!-- Register  -->
@@ -43,29 +43,14 @@
                     <label for="register-password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="register-password" placeholder="Enter your password">
                 </div>
-                <button type="submit" class="btn btn-green w-100 register" onclick="toggleForms()">Register</button>
+                <button type="submit" class="btn btn-green w-100 register" id="regis_btn">Register</button>
             </form>
-            <p class="text-center mt-3">Already have an account? <span class="toggle-btn" onclick="toggleForms()">Login</span></p>
+            <p class="text-center mt-3">Already have an account? <span class="toggle-btn" id="toLogin">Login</span></p>
          </div>
     </div>
 </div>
 
-<!-- <script>
-    let isLogin = true;
-    function toggleForms() {
-        const forms = document.getElementById('forms');
-        if (isLogin) {
-            forms.style.transform = 'translateX(-50%)'; /* Переход на правую сторону к форме регистрации*/
-        } else {
-            forms.style.transform = 'translateX(0)'; /* Возврат к форме входа */
-        }
-        isLogin = !isLogin;
-    }
-    function Login() {
-        window.location.href = "index.html";
-    }
-</script> -->
-<script src="login.js"></script>
+<script src="login.js" type="module"></script>
 
 </body>
 </html>

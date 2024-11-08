@@ -2,10 +2,20 @@
 import { recipes } from '/recipe.js'
 import { favorites } from '/recipe.js'
 
-// if(!isLogin){
-//     document.getElementById('loginRegisterBtns').outerHTML = 
-//     '<img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="User Icon" width="50px" onclick="redirectToLoginPage()"/>'
-// } этот код должен был поменять кнопки на значок аватарки, при условий что кнопка логин была уже нажата
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const isLoggedIn = params.get('loggedIn') === 'true';
+    const loginedDiv=document.getElementById('loginRegisterBtns')
+    const profileDiv=document.getElementById('profile')
+
+    if (isLoggedIn) {
+        loginedDiv.style.display = 'none';
+        profileDiv.style.display = 'inline';
+    } else {
+        loginedDiv.style.display = 'inline';
+        profileDiv.style.display = 'none';
+    }
+});
 
 //get part where all recipes
 const div_recipe=document.getElementById('recipes')
@@ -19,7 +29,7 @@ profile_button.addEventListener('click', ()=>redirectToPage())
 
 // для переброски пользователя на страницу регистраций и входа при нажатий на иконку 
 function redirectToPage() {
-    window.location.href = "index.html"; 
+    alert("At the moment profile page doesnt work😢")
 }
 
 function toLogin(){
@@ -27,8 +37,9 @@ function toLogin(){
 }
 
 function toRegister(){
-    window.location.href = "Login Register.html"; 
+    window.location.href = "Login Register.html?isLogin=false"; 
 }
+
 
 //append all recipe
 for(let i=0; i<recipes.length; i++){

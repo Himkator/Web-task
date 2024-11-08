@@ -121,4 +121,5 @@ export const recipes = [
   ];
   
 //user favorites
-export let favorites=[{}]; 
+export let favorites=[]; 
+
