@@ -27,6 +27,17 @@ register_button.addEventListener('click', ()=>toRegister())
 profile_button.addEventListener('click', ()=>redirectToPage())
 
 
+const logo=document.getElementById('logo')
+const about=document.getElementById('about')
+
+logo.addEventListener('click', ()=>{
+    window.location.href = "index.html"; 
+})
+
+about.addEventListener('click', ()=>{
+    window.location.href = "aboutUs.html"; 
+})
+
 // для переброски пользователя на страницу регистраций и входа при нажатий на иконку 
 function redirectToPage() {
     alert("At the moment profile page doesnt work😢")
@@ -114,6 +125,7 @@ for(let i=0; i<recipes.length; i++){
 //TODO Improve this function
 function toRecipePage(indexOfRecipe){
     console.log(indexOfRecipe)
+    window.location.href = "receip.html?receipId="+indexOfRecipe; 
 }
 
 //function for click recipe
