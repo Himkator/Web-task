@@ -1,0 +1,122 @@
+/* remove all default margin and padding */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* header part */
+header{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+.search{
+    margin-right: 10px;
+}
+/* when logined */
+.login.unlogined{
+    display: none;
+}
+/* when unligined */
+/* .profile.logined{
+    display: none;
+} */
+.logo-icon.logined{
+    display: contents;
+}
+.logo-icon { /*для логотпа логина на странице index */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+#profile{
+    display: none;
+}
+hr{
+    margin-bottom: 0;
+    box-shadow: 1px ;
+}
+
+/* main part */
+.main{
+    padding-top: 60px;
+    padding-left: 20px;
+    background-color: rgb(241, 235, 235);
+    padding-bottom: 40px;
+}
+.card-feature{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.feature h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.info{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+/* recipes */
+.recipe{
+    margin-top: 70px;
+}
+.recipe h1{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.recipe-card{
+    width: 390px;
+    height: 100%;
+}
+.card-button{
+    margin-bottom: 5px;
+}
+.recipes-cards-part{
+    margin-bottom: 80px;
+}
+.recipe img{
+    height:250px
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Star icon style */
+.favorite-star {
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Filled star color when clicked */
+.favorite-star.favorited {
+    color: gold;
+}
+
+/* footer part */
+footer{
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    padding-left: 50px;
+    padding-right: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+footer h1{
+    padding-top: 50px;
+}
+footer{
+    display: flex;
+}
+.links{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
